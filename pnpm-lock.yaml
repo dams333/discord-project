@@ -1,8 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/keypress': ^2.0.30
   '@types/node': ^20.5.1
   discord.js: ^14.13.0
+  keypress: ^0.2.1
   nodemon: ^3.0.1
   readline: ^1.3.0
   ts-node: ^10.9.1
@@ -11,9 +13,11 @@ specifiers:
 
 dependencies:
   discord.js: 14.13.0
+  keypress: 0.2.1
   readline: 1.3.0
 
 devDependencies:
+  '@types/keypress': 2.0.30
   '@types/node': 20.5.1
   nodemon: 3.0.1
   ts-node: 10.9.1_nlfdnzsudxdzt42qyp5hqbr53u
@@ -140,6 +144,11 @@ packages:
 
   /@tsconfig/node16/1.0.4:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
+    dev: true
+
+  /@types/keypress/2.0.30:
+    resolution: {integrity: sha512-PCS6Mrv4gbQ9167E25nuVmqerT4xM/zWuVFTLfHdQgBwmsfMj2kXR1DI3qZ5N3p21gbrPweRghci2CjMHRCWkA==}
+    deprecated: '''@types/keypress'' is now ''@types/keypress.js'''
     dev: true
 
   /@types/node/20.5.1:
@@ -338,6 +347,10 @@ packages:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
     dev: true
+
+  /keypress/0.2.1:
+    resolution: {integrity: sha512-HjorDJFNhnM4SicvaUXac0X77NiskggxJdesG72+O5zBKpSqKFCrqmndKVqpu3pFqkla0St6uGk8Ju0sCurrmg==}
+    dev: false
 
   /lodash.snakecase/4.1.1:
     resolution: {integrity: sha512-QZ1d4xoBHYUeuouhEq3lk3Uq7ldgyFXGBhg04+oRLnIz8o9T65Eh+8YdroUwn846zchkA9yDsDl5CVVaV2nqYw==}
