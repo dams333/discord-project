@@ -1,0 +1,9 @@
+{
+	"ignore": ["**/*.test.ts", "**/*.spec.ts", "node_modules"],
+	"watch": ["srcs"],
+	"exec": "pnpm start",
+	"ext": "ts",
+	"events": {
+		"start": "clear"
+	}
+}

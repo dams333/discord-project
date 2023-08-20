@@ -1,0 +1,24 @@
+{
+	"name": "discord_project",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "node .",
+		"start:dev": "npx nodemon -q",
+		"test": "tsc && node ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^20.5.1",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.1.6",
+		"nodemon": "^3.0.1"
+	},
+	"dependencies": {
+		"discord.js": "^14.13.0"
+	}
+}
