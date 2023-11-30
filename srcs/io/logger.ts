@@ -72,3 +72,7 @@ export function log(level: LogLevel, message: string): void {
 	console.log('\r' + toPrint + ConsoleColor.RESET);
 	redrawPrompt();
 }
+
+export function logInfo(message: string): void {
+	log(LogLevel.INFO, message);
+}

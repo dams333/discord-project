@@ -19,5 +19,5 @@ export async function getline(prompt: string): Promise<string> {
 
 export function redrawPrompt(): void {
 	if (promptSave === '') return;
-	rl.write(promptSave);
+	rl.write(null, { ctrl: true, name: 'u' });
 }
