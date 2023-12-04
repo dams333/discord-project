@@ -6,8 +6,10 @@ const rl = require('readline').createInterface({
 
 export async function getline(prompt: string): Promise<string> {
 	process.stdout.write(prompt);
+	rl.resume();
 	return new Promise(resolve => {		
 		rl.question(prompt, (answer: string) => {
+			rl.pause();
 			resolve(answer);
 		});
   });
