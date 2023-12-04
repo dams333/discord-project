@@ -1,7 +1,9 @@
 export enum LogLevel {
+	DEBUG,
 	INFO,
 	WARN,
 	ERROR,
+	SUCCESS,
 }
 
 enum ConsoleColor {
@@ -53,17 +55,32 @@ function getCurrentDate(): string {
 	);
 }
 
+let debugLogEnabled = false;
+
+export function enableDebugLog(): void {
+	debugLogEnabled = true;
+}
+
 export function log(level: LogLevel, message: string): void {
+	if (level === LogLevel.DEBUG && !debugLogEnabled) {
+		return;
+	}
 	let toPrint = '[' + getCurrentDate() + '] ';
 	switch (level) {
+		case LogLevel.DEBUG:
+			toPrint += ConsoleColor.MAGENTA + '[DEBUG] ' + ConsoleColor.RESET;
+			break;
 		case LogLevel.INFO:
-			toPrint += ConsoleColor.GREEN + '[INFO] ' + ConsoleColor.RESET;
+			toPrint += ConsoleColor.CYAN + '[INFO] ' + ConsoleColor.RESET;
 			break;
 		case LogLevel.WARN:
 			toPrint += ConsoleColor.YELLOW + '[WARN] ' + ConsoleColor.RESET;
 			break;
 		case LogLevel.ERROR:
 			toPrint += ConsoleColor.RED + '[ERROR] ' + ConsoleColor.RESET;
+			break;
+		case LogLevel.SUCCESS:
+			toPrint += ConsoleColor.GREEN + '[SUCCESS] ' + ConsoleColor.RESET;
 			break;
 	}
 	toPrint += message;

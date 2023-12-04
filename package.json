@@ -7,7 +7,7 @@
 		"build": "tsc",
 		"start": "node .",
 		"start:dev": "npx nodemon -q",
-		"test": "tsc && node ."
+		"test": "tsc && node . --debug"
 	},
 	"keywords": [],
 	"author": "",
