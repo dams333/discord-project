@@ -1,23 +1,14 @@
-import * as readline from 'readline';
-
-const rl = readline.createInterface({
+const rl = require('readline').createInterface({
 	input: process.stdin,
-	output: process.stdout,
+	output: null,
+	terminal: true
 });
 
-let promptSave = '';
-
 export async function getline(prompt: string): Promise<string> {
-	promptSave = prompt;
-	return new Promise((resolve, reject) => {
+	process.stdout.write(prompt);
+	return new Promise(resolve => {		
 		rl.question(prompt, (answer: string) => {
-			promptSave = '';
 			resolve(answer);
 		});
-	});
-}
-
-export function redrawPrompt(): void {
-	if (promptSave === '') return;
-	rl.write(null, { ctrl: true, name: 'u' });
+  });
 }

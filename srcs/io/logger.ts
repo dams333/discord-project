@@ -1,5 +1,3 @@
-import { redrawPrompt } from './readlineHandler';
-
 export enum LogLevel {
 	INFO,
 	WARN,
@@ -70,7 +68,6 @@ export function log(level: LogLevel, message: string): void {
 	}
 	toPrint += message;
 	console.log('\r' + toPrint + ConsoleColor.RESET);
-	redrawPrompt();
 }
 
 export function logInfo(message: string): void {
